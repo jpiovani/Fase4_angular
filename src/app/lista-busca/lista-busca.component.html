@@ -1,0 +1,9 @@
+<h1>Lavanderias Disponiveis...</h1>
+
+<div class="lavanderia-item" *ngFor="let lavanderias of lavanderia |async">
+    <span><b>{{ lavanderias.nome }}</b></span>
+    <span>{{ lavanderias.endereco }}</span>
+    <span>{{ lavanderias.numeroEndereco }}</span>
+    <span>{{ lavanderias.bairro }}</span>
+    <span>{{ lavanderias.zona }}</span>
+</div>

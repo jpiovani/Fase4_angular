@@ -1,0 +1,30 @@
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="name">Nome </label>
+        <input id="name" type="text" formControlName="nome" />
+    </div>
+
+    <div>
+        <label for="endereco">Endereço </label>
+        <input id="endereco" type="text" formControlName="endereco" />
+    </div>
+
+    <div>
+        <label for="numero">Número</label>
+        <input id="numero" type="number" formControlName="numeroEndereco" />
+    </div>
+
+    <div>
+        <label for="bairro">Bairro </label>
+        <input id="bairro" type="text" formControlName="bairro" />
+    </div>
+
+    <div>
+        <label for="zona">Zona </label>
+        <input id="zona" type="text" formControlName="zona" />
+    </div>
+
+    <button class="button" type="submit">Cadastrar</button>
+
+
+</form>
