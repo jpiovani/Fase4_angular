@@ -15,7 +15,7 @@ export class BuscaService {
   ) { }
 
   addToLavanderia(lavanderia: any){
-    this.http.post('http://localhost:8080/lavanderias/v1', lavanderia).subscribe((data) => {});
+    this.http.post('http://localhost:8080/lavanderias/v1/add', lavanderia).subscribe((data) => {});
   }
 
   getLavanderias(){
@@ -30,7 +30,7 @@ export class BuscaService {
 
   getListaLavanderias() : Observable<any>{
     return this.http.get
-    <{ nome: string, endereco: string, numeroEndereco: number, bairro: string, zona: string }>
+    <{ nome: string, endereco: string, numero: number, bairro: string, zona: string }>
     ('http://localhost:8080/lavanderias/v1');
   }
 

@@ -27,9 +27,15 @@ export class CadastrarLavanderiaComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.warn('Cadastro efetuado', this.formulario.value);
     this.buscaService.addToLavanderia(this.formulario.value);
-    this.formulario.reset;
+    window.alert("Lavanderia cadastrada com sucesso!!! ");
+    this.formulario = this.form.group({
+      nome: '',
+      endereco: '',
+      numeroEndereco: '',
+      bairro: '',
+      zona: ''
+    });
   }
 
 }
